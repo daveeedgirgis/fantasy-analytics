@@ -299,11 +299,11 @@ button.mobile-link {
 }
 
 /* Tab Content - sections hidden by default when tabs are active */
-[data-tab] {
+section[data-tab] {
   display: none;
 }
 
-[data-tab].tab-visible {
+section[data-tab].tab-visible {
   display: block;
   animation: tabFadeIn 0.3s ease;
 }
