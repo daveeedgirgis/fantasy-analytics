@@ -4,6 +4,9 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Main Tab Navigation
+  initMainTabs();
+
   // Mobile Menu
   initMobileMenu();
 
@@ -19,6 +22,74 @@ document.addEventListener('DOMContentLoaded', () => {
   // Smooth scroll for anchor links
   initSmoothScroll();
 });
+
+/* ============================================
+   Main Tab Navigation
+   ============================================ */
+
+function initMainTabs() {
+  const tabs = document.querySelectorAll('.main-tab');
+  const mobileTabs = document.querySelectorAll('.mobile-tab');
+  const sections = document.querySelectorAll('[data-tab]');
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (!tabs.length || !sections.length) return;
+
+  // Show initial tab (home)
+  showTab('home');
+
+  // Add click handlers for desktop tabs
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetTab = tab.dataset.tab;
+      activateTab(targetTab);
+    });
+  });
+
+  // Add click handlers for mobile tabs
+  mobileTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetTab = tab.dataset.tab;
+      activateTab(targetTab);
+
+      // Close mobile menu
+      if (menuBtn && mobileMenu) {
+        menuBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  function activateTab(tabName) {
+    // Update active tab (desktop)
+    tabs.forEach(t => t.classList.remove('active'));
+    tabs.forEach(t => {
+      if (t.dataset.tab === tabName) t.classList.add('active');
+    });
+
+    // Show matching sections
+    showTab(tabName);
+
+    // Scroll to top of content
+    const mainTabs = document.getElementById('mainTabs');
+    if (mainTabs) {
+      const offset = mainTabs.offsetTop + mainTabs.offsetHeight;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  }
+
+  function showTab(tabName) {
+    sections.forEach(section => {
+      if (section.dataset.tab === tabName) {
+        section.classList.add('tab-visible');
+      } else {
+        section.classList.remove('tab-visible');
+      }
+    });
+  }
+}
 
 /* ============================================
    Mobile Menu

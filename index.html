@@ -31,10 +31,12 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-content">
-      <a href="#features" class="mobile-link" data-index="01">Features</a>
-      <a href="#stats" class="mobile-link" data-index="02">Live Stats</a>
-      <a href="#projections" class="mobile-link" data-index="03">Projections</a>
-      <a href="#pricing" class="mobile-link" data-index="04">Pricing</a>
+      <button class="mobile-link mobile-tab" data-tab="home" data-index="01">Home</button>
+      <button class="mobile-link mobile-tab" data-tab="my-team" data-index="02">My Team</button>
+      <button class="mobile-link mobile-tab" data-tab="matchups" data-index="03">Matchups</button>
+      <button class="mobile-link mobile-tab" data-tab="players" data-index="04">Players</button>
+      <button class="mobile-link mobile-tab" data-tab="draft" data-index="05">Draft</button>
+      <a href="#pricing" class="mobile-link" data-index="06">Pricing</a>
     </div>
   </div>
 
@@ -122,8 +124,19 @@
     </div>
   </section>
 
+  <!-- Main Tab Navigation -->
+  <nav class="main-tabs" id="mainTabs">
+    <div class="tabs-container">
+      <button class="main-tab active" data-tab="home">Home</button>
+      <button class="main-tab" data-tab="my-team">My Team</button>
+      <button class="main-tab" data-tab="matchups">Matchups</button>
+      <button class="main-tab" data-tab="players">Players</button>
+      <button class="main-tab" data-tab="draft">Draft</button>
+    </div>
+  </nav>
+
   <!-- Features Section -->
-  <section class="features" id="features">
+  <section class="features" id="features" data-tab="home">
     <div class="section-header">
       <span class="section-number">01</span>
       <h2 class="section-title">
@@ -195,7 +208,7 @@
   </section>
 
   <!-- Live Stats Section -->
-  <section class="live-stats" id="stats">
+  <section class="live-stats" id="stats" data-tab="home">
     <div class="section-header">
       <span class="section-number">02</span>
       <h2 class="section-title">
@@ -271,7 +284,7 @@
   </section>
 
   <!-- Weekly Top Performers Section -->
-  <section class="top-performers" id="performers">
+  <section class="top-performers" id="performers" data-tab="home">
     <div class="section-header">
       <span class="section-number">02.1</span>
       <h2 class="section-title">
@@ -532,7 +545,7 @@
   </section>
 
   <!-- Waiver Wire Section -->
-  <section class="waiver-wire" id="waivers">
+  <section class="waiver-wire" id="waivers" data-tab="home">
     <div class="section-header">
       <span class="section-number">02.2</span>
       <h2 class="section-title">
@@ -653,7 +666,7 @@
   </section>
 
   <!-- Injury Report Section -->
-  <section class="injury-report" id="injuries">
+  <section class="injury-report" id="injuries" data-tab="home">
     <div class="section-header">
       <span class="section-number">02.3</span>
       <h2 class="section-title">
@@ -761,7 +774,7 @@
   </section>
 
   <!-- Rest of Season Rankings Section -->
-  <section class="ros-rankings" id="rankings">
+  <section class="ros-rankings" id="rankings" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.4</span>
       <h2 class="section-title">
@@ -928,7 +941,7 @@
   </section>
 
   <!-- Matchup Heatmap Section -->
-  <section class="heatmap-section" id="heatmap">
+  <section class="heatmap-section" id="heatmap" data-tab="draft">
     <div class="section-header">
       <span class="section-number">02.5</span>
       <h2 class="section-title">
@@ -1045,7 +1058,7 @@
   </section>
 
   <!-- Radar Chart Player Comparison -->
-  <section class="radar-section" id="compare">
+  <section class="radar-section" id="compare" data-tab="matchups">
     <div class="section-header">
       <span class="section-number">02.6</span>
       <h2 class="section-title">
@@ -1171,7 +1184,7 @@
   </section>
 
   <!-- Boom/Bust Probability Section -->
-  <section class="boom-bust-section" id="boom-bust">
+  <section class="boom-bust-section" id="boom-bust" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.7</span>
       <h2 class="section-title">
@@ -1404,7 +1417,7 @@
   </section>
 
   <!-- Target Share & Usage Section -->
-  <section class="usage-section" id="usage">
+  <section class="usage-section" id="usage" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.8</span>
       <h2 class="section-title">
@@ -1723,7 +1736,7 @@
   </section>
 
   <!-- Live H2H Matchup Section -->
-  <section class="h2h-section" id="h2h">
+  <section class="h2h-section" id="h2h" data-tab="matchups">
     <div class="section-header">
       <span class="section-number">02.9</span>
       <h2 class="section-title">
@@ -2018,7 +2031,7 @@
   </section>
 
   <!-- Predictability Index Section -->
-  <section class="predictability-section" id="predictability">
+  <section class="predictability-section" id="predictability" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.10</span>
       <h2 class="section-title">
@@ -2270,7 +2283,7 @@
   </section>
 
   <!-- Lineup Comparison Section -->
-  <section class="lineup-compare-section" id="lineup-compare">
+  <section class="lineup-compare-section" id="lineup-compare" data-tab="my-team">
     <div class="section-header">
       <span class="section-number">02.11</span>
       <h2 class="section-title">
@@ -2549,7 +2562,7 @@
   </section>
 
   <!-- Trade Analyzer Section -->
-  <section class="trade-analyzer-section" id="trade">
+  <section class="trade-analyzer-section" id="trade" data-tab="my-team">
     <div class="section-header">
       <span class="section-number">02.12</span>
       <h2 class="section-title">
@@ -2649,7 +2662,7 @@
   </section>
 
   <!-- Start/Sit Tool Section -->
-  <section class="start-sit-section" id="start-sit">
+  <section class="start-sit-section" id="start-sit" data-tab="my-team">
     <div class="section-header">
       <span class="section-number">02.13</span>
       <h2 class="section-title">
@@ -2819,7 +2832,7 @@
   </section>
 
   <!-- My Roster Section -->
-  <section class="my-roster-section" id="my-roster">
+  <section class="my-roster-section" id="my-roster" data-tab="my-team">
     <div class="section-header">
       <span class="section-number">02.14</span>
       <h2 class="section-title">
@@ -2986,7 +2999,7 @@
   </section>
 
   <!-- League Standings Section -->
-  <section class="standings-section" id="standings">
+  <section class="standings-section" id="standings" data-tab="home">
     <div class="section-header">
       <span class="section-number">02.15</span>
       <h2 class="section-title">
@@ -3121,7 +3134,7 @@
   </section>
 
   <!-- Player News Feed Section -->
-  <section class="news-section" id="news">
+  <section class="news-section" id="news" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.16</span>
       <h2 class="section-title">
@@ -3222,7 +3235,7 @@
   </section>
 
   <!-- Draft Rankings Section -->
-  <section class="draft-section" id="draft">
+  <section class="draft-section" id="draft" data-tab="draft">
     <div class="section-header">
       <span class="section-number">02.17</span>
       <h2 class="section-title">
@@ -3334,7 +3347,7 @@
   </section>
 
   <!-- Strength of Schedule Section -->
-  <section class="sos-section" id="sos">
+  <section class="sos-section" id="sos" data-tab="draft">
     <div class="section-header">
       <span class="section-number">02.18</span>
       <h2 class="section-title">
@@ -3475,7 +3488,7 @@
   </section>
 
   <!-- Weekly Matchups Section -->
-  <section class="matchups-section" id="matchups">
+  <section class="matchups-section" id="matchups" data-tab="matchups">
     <div class="section-header">
       <span class="section-number">02.19</span>
       <h2 class="section-title">
@@ -3645,7 +3658,7 @@
   </section>
 
   <!-- Playoff Odds Section -->
-  <section class="playoff-odds-section" id="playoffs">
+  <section class="playoff-odds-section" id="playoffs" data-tab="matchups">
     <div class="section-header">
       <span class="section-number">02.20</span>
       <h2 class="section-title">
@@ -3748,7 +3761,7 @@
   </section>
 
   <!-- Scoring Breakdown Section -->
-  <section class="scoring-section" id="scoring">
+  <section class="scoring-section" id="scoring" data-tab="my-team">
     <div class="section-header">
       <span class="section-number">02.21</span>
       <h2 class="section-title">
@@ -3888,7 +3901,7 @@
   </section>
 
   <!-- DFS Optimizer Section -->
-  <section class="dfs-section" id="dfs">
+  <section class="dfs-section" id="dfs" data-tab="draft">
     <div class="section-header">
       <span class="section-number">02.22</span>
       <h2 class="section-title">
@@ -4017,7 +4030,7 @@
   </section>
 
   <!-- Weather Section -->
-  <section class="weather-section" id="weather">
+  <section class="weather-section" id="weather" data-tab="matchups">
     <div class="section-header">
       <span class="section-number">02.23</span>
       <h2 class="section-title">
@@ -4136,7 +4149,7 @@
   </section>
 
   <!-- Snap Count Section -->
-  <section class="snaps-section" id="snaps">
+  <section class="snaps-section" id="snaps" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.24</span>
       <h2 class="section-title">
@@ -4271,7 +4284,7 @@
   </section>
 
   <!-- Player Trends Section -->
-  <section class="trends-section" id="trends">
+  <section class="trends-section" id="trends" data-tab="players">
     <div class="section-header">
       <span class="section-number">02.25</span>
       <h2 class="section-title">
@@ -4440,7 +4453,7 @@
   </section>
 
   <!-- Auction Values Section -->
-  <section class="auction-section" id="auction">
+  <section class="auction-section" id="auction" data-tab="draft">
     <div class="section-header">
       <span class="section-number">02.26</span>
       <h2 class="section-title">
@@ -4585,7 +4598,7 @@
   </section>
 
   <!-- Projections Section -->
-  <section class="projections" id="projections">
+  <section class="projections" id="projections" data-tab="home">
     <div class="projections-content">
       <div class="section-header">
         <span class="section-number">03</span>
