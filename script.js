@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initMainTabs() {
   const tabs = document.querySelectorAll('.main-tab');
   const mobileTabs = document.querySelectorAll('.mobile-tab');
-  const sections = document.querySelectorAll('[data-tab]');
+  const sections = document.querySelectorAll('section[data-tab]');
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
 
