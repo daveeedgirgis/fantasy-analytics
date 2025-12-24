@@ -244,10 +244,12 @@ button.mobile-link {
    ============================================ */
 
 .main-tabs {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
   z-index: 90;
-  background: var(--bg-primary);
+  background: rgba(10, 10, 11, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.75rem clamp(1rem, 3vw, 2rem);
   backdrop-filter: blur(20px);
@@ -337,7 +339,7 @@ button.mobile-link {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  padding: calc(6rem + var(--section-pad)) clamp(1.5rem, 5vw, 3rem) var(--section-pad);
+  padding: calc(8rem + var(--section-pad)) clamp(1.5rem, 5vw, 3rem) var(--section-pad);
   position: relative;
 }
 
