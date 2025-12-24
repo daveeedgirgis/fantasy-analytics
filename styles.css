@@ -273,12 +273,12 @@ button.mobile-link {
 
 .main-tab {
   padding: 0.625rem 1.25rem;
-  background: var(--bg-tertiary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  color: var(--text-primary);
+  color: #fafafa;
   font-family: var(--font-display);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -287,15 +287,15 @@ button.mobile-link {
 }
 
 .main-tab:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: var(--text-primary);
+  background: #27272a;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
 
 .main-tab.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg-primary);
+  background: #22d3ee;
+  border-color: #22d3ee;
+  color: #0a0a0b;
 }
 
 /* Tab Content - sections hidden by default when tabs are active */
